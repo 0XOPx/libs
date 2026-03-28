@@ -1,0 +1,154 @@
+:root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+h1 {
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-header {
+    margin-bottom: 20px;
+}
+
+.eyebrow {
+    margin: 0 0 6px;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    margin: -10px 0 0;
+    color: var(--muted);
+}
+
+.notice {
+    margin-bottom: 18px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--muted);
+    background: rgba(88, 166, 255, 0.08);
+}
+
+.notice:empty {
+    display: none;
+}
+
+.notice-error {
+    color: #ffb4b4;
+    background: rgba(248, 81, 73, 0.12);
+    border-color: rgba(248, 81, 73, 0.4);
+}
+
+.tree,
+.tree ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.tree > li:first-child {
+    margin-top: 0;
+}
+
+.tree li {
+    position: relative;
+    margin: 6px 0;
+    padding-left: 16px;
+}
+
+.tree li::before {
+    content: "";
+    position: absolute;
+    top: 0.95rem;
+    left: 0;
+    width: 10px;
+    border-top: 1px solid var(--border);
+}
+
+.tree li::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    bottom: -6px;
+    left: 0;
+    border-left: 1px solid var(--border);
+}
+
+.tree li:last-child::after {
+    bottom: calc(100% - 0.95rem);
+}
+
+.tree-empty {
+    color: var(--muted);
+    font-style: italic;
+}
+
+.folder {
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.file {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.file:hover,
+.file:focus-visible {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 28px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+footer img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 24px 12px;
+    }
+
+    .container {
+        padding: 18px;
+    }
+}
